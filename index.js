@@ -66,5 +66,5 @@ console.log(generatedRatio);
 try {
     clipboardy.writeSync(generatedRatio);
 } catch (err) {
-    console.log(err);
+    throw err;
 }
