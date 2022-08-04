@@ -1,4 +1,6 @@
-const counterRatios = [
+import clipboardy from 'clipboardy';
+
+var counterRatios = [
     "https://media.discordapp.net/attachments/903607616159232055/1002984680582287401/Lol_Dumbass.gif",
     "https://media.discordapp.net/attachments/821914603244093450/978311832269889556/fuckmedaddyharderohyeailovecokcimsocissyfemboy-1.gif",
     "https://media.discordapp.net/attachments/903607616159232055/1002709241896898622/unknown.gif",
@@ -58,7 +60,6 @@ const counterRatios = [
     "https://cdn.discordapp.com/attachments/652292364135825418/955945443081220106/34657678255.gif"
 ];
 
-import clipboardy from 'clipboardy';
 let generatedRatio = counterRatios[Math.floor(Math.random() * counterRatios.length)];
 
 console.log(generatedRatio);
