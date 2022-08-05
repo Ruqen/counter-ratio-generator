@@ -18,6 +18,7 @@ var counterRatios = [
     "https://cdn.discordapp.com/attachments/819984015766323231/956027891760644096/zeti2.gif",
     "https://media.discordapp.net/attachments/903607616159232055/997911180603572264/unknown.gif",
     "https://media.discordapp.net/attachments/967148626725982228/994939435269509150/wow.gif",
+    "https://media.discordapp.net/attachments/145634871493132288/901604687910944828/image0-6_1.gif",
     "https://media.discordapp.net/attachments/967148626725982228/994943029603479592/chokeplay.gif",
     "https://media.discordapp.net/attachments/570686290799099920/997954237344518154/togif.gif",
     "https://media.discordapp.net/attachments/864963422381408298/997441977241051146/skirt-1.png.gif",
