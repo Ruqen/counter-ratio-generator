@@ -82,11 +82,11 @@ async function genRatio(query) {
 			console.log(chalk.green("[SUCCESS]") + " Successfully generated ratio and copied to clipboard.");
 		}
 		
-		generatedRatio = counterRatios[Math.floor(Math.random() * counterRatios.length)]
+		let generatedRatio = counterRatios[Math.floor(Math.random() * counterRatios.length)]
 		try {
     		clipboardy.writeSync(generatedRatio);
 		} catch (err) {
-            console.log(chalk.red("[ERROR]") + " Failed to copy to clipboard. Check message down below for more information.");
+            	console.log(chalk.red("[ERROR]") + " Failed to copy to clipboard. Check message down below for more information.");
     		throw err;
 		}
 
