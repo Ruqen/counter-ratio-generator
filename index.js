@@ -1,4 +1,9 @@
+import readline from 'readline';
 import clipboardy from 'clipboardy';
+import chalk from 'chalk';
+
+let ans
+let generatedRatio
 
 var counterRatios = [
     "https://media.discordapp.net/attachments/903607616159232055/1002984680582287401/Lol_Dumbass.gif",
@@ -61,12 +66,32 @@ var counterRatios = [
     "https://cdn.discordapp.com/attachments/652292364135825418/955945443081220106/34657678255.gif"
 ];
 
-let generatedRatio = counterRatios[Math.floor(Math.random() * counterRatios.length)];
+process.stdout.write("\u001b[2J\u001b[0;0H");
 
-console.log(generatedRatio);
+console.log(chalk.blue("[INFO]") + " Press ENTER to generate a random ratio.");
 
-try {
-    clipboardy.writeSync(generatedRatio);
-} catch (err) {
-    throw err;
+async function genRatio(query) {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+    });
+
+    return new Promise(resolve => rl.question(query, ans => {
+        rl.close();
+        if (ans == "") {
+			console.log(chalk.green("[SUCCESS]") + " Successfully generated ratio and copied to clipboard.");
+		}
+		
+		generatedRatio = counterRatios[Math.floor(Math.random() * counterRatios.length)]
+		try {
+    		clipboardy.writeSync(generatedRatio);
+		} catch (err) {
+            console.log(chalk.red("[ERROR]") + " Failed to copy to clipboard. Check message down below for more information.");
+    		throw err;
+		}
+
+		ans = genRatio("")
+    }))
 }
+
+await genRatio("");
