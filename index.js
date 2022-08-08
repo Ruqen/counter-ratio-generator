@@ -10,6 +10,7 @@ var counterRatios = [
     "https://tenor.com/view/speech-bubble-chicken-gif-26197609",
     "https://media.discordapp.net/attachments/821914603244093450/978311832269889556/fuckmedaddyharderohyeailovecokcimsocissyfemboy-1.gif",
     "https://media.discordapp.net/attachments/903607616159232055/1002709241896898622/unknown.gif",
+	"https://media.discordapp.net/attachments/748191179132371138/986359178081746954/Adobe_20220429_005827.gif",
     "https://media.discordapp.net/attachments/903607616159232055/1000701167900303420/unknown.gif",
     "https://media.discordapp.net/attachments/959680804429131777/1001412316161654804/deception68_reaction.gif",
     "https://media.discordapp.net/attachments/903607616159232055/1000701644264198255/unknown.gif",
