@@ -8,6 +8,7 @@ let generatedRatio
 var counterRatios = [
     "https://media.discordapp.net/attachments/903607616159232055/1002984680582287401/Lol_Dumbass.gif",
     "https://tenor.com/view/speech-bubble-chicken-gif-26197609",
+    "https://media.discordapp.net/attachments/1008195177791377438/1008330435182481428/yhKSpWlO.gif",
     "https://media.discordapp.net/attachments/925855860557746267/991014600403193927/C4BCE10F-5A8C-4C2D-9E60-0F54B15920F9.gif",
     "https://media.discordapp.net/attachments/821914603244093450/978311832269889556/fuckmedaddyharderohyeailovecokcimsocissyfemboy-1.gif",
     "https://media.discordapp.net/attachments/903607616159232055/1002709241896898622/unknown.gif",
