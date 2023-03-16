@@ -111,7 +111,6 @@ const gifLinks = [
     "https://media.discordapp.net/attachments/1057138848146149427/1071611188573634590/7F0B8F20-BAC9-41BA-8F72-D7C026EA90B8.gif",
     "https://media.discordapp.net/attachments/1011994616112885872/1017037255367458846/attachment.gif?width=335&height=632",
     "https://images-ext-1.discordapp.net/external/sEOAprHmA76Wz1oxxUwxbrbCSZb1fQ0DHjpstm52iDk/https/media.tenor.com/5CTLXubN-JEAAAPo/nerd-pacman-speechbubble.mp4",
-    "https://media.discordapp.net/attachments/903607616159232055/984516006716276777/uncaption.gif?width=698&height=632",
     "https://media.discordapp.net/attachments/651920934927728653/990355817444294747/BF254E80-068F-4FE4-8068-8D018CD483BD.gif",
     "https://images-ext-1.discordapp.net/external/Tpa0Ei1MZLftNr4fhOzfxPt165aktIJxy3JNN6wQ6QQ/https/media.tenor.com/DIW_H1w1RXoAAAPo/kyaru-karyl.mp4",
     "https://images-ext-2.discordapp.net/external/fAt2Vuk70CSzxOdsf8aMTNB32znhTIsV9ACtKO3z43w/https/media.tenor.com/P9biOAenkQMAAAPo/purble-place-purble.mp4",
