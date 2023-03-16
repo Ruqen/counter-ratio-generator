@@ -1,11 +1,7 @@
-import readline from 'readline';
 import clipboardy from 'clipboardy';
-import chalk from 'chalk';
+import colors from 'colors';
 
-let ans
-let generatedRatio
-
-var counterRatios = [
+const gifLinks = [
     "https://media.discordapp.net/attachments/903607616159232055/1002984680582287401/Lol_Dumbass.gif",
     "https://tenor.com/view/speech-bubble-chicken-gif-26197609",
     "https://media.discordapp.net/attachments/1008195177791377438/1008330435182481428/yhKSpWlO.gif",
@@ -71,32 +67,41 @@ var counterRatios = [
     "https://cdn.discordapp.com/attachments/652292364135825418/955945443081220106/34657678255.gif"
 ];
 
-process.stdout.write("\u001b[2J\u001b[0;0H");
+const usedLinks = [];
 
-console.log(chalk.blue("[INFO]") + " Press ENTER to generate a random ratio.");
+function getRandomLink() {
+  let link = gifLinks[Math.floor(Math.random() * gifLinks.length)];
 
-async function genRatio(query) {
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout,
-    });
+  while (usedLinks.includes(link)) {
+    if (usedLinks.length === gifLinks.length) {
+      usedLinks.length = 0;
+      console.log(colors.blue('[INFO]') + ' Program ran out of links, resetting...\n');
+    }
 
-    return new Promise(resolve => rl.question(query, ans => {
-        rl.close();
-        if (ans == "") {
-			console.log(chalk.green("[SUCCESS]") + " Successfully generated ratio and copied to clipboard.");
-		}
-		
-		let generatedRatio = counterRatios[Math.floor(Math.random() * counterRatios.length)]
-		try {
-    		clipboardy.writeSync(generatedRatio);
-		} catch (err) {
-            	console.log(chalk.red("[ERROR]") + " Failed to copy to clipboard. Check message down below for more information.");
-    		throw err;
-		}
+    link = gifLinks[Math.floor(Math.random() * gifLinks.length)];
+  }
 
-		ans = genRatio("")
-    }))
+  usedLinks.push(link);
+  return link;
 }
 
-await genRatio("");
+process.stdin.on('data', function (data) {
+  if (data.toString().trim() === '') {
+    const link = getRandomLink();
+    clipboardy.write(link).then(() => {
+      console.log(colors.green('[SUCCESS]') + ` Copied to clipboard.`);
+    }).catch((err) => {
+      console.error(colors.red('[FAIL]') + ` Error copying to clipboard: ${err}`);
+    });
+  }
+});
+
+process.on('uncaughtException', (err) => {
+    console.error(colors.red('[ERROR]') + ` Uncaught Exception: ${err}`);
+});
+  
+process.on('unhandledRejection', (reason, promise) => {
+    console.error(colors.red('[ERROR]') + ` Unhandled Rejection at: Promise ${promise}, reason: ${reason}`);
+});
+
+console.log(colors.blue("[INFO]") + " Press ENTER to generate a random ratio.");
